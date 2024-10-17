@@ -1,0 +1,149 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 24.0.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/gcc-14 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/3.30.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1TTWaG"
+      binary: "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1TTWaG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/llvm/lib\nexport CPPFLAGS=-I/opt/homebrew/opt/llvm/include"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1TTWaG'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8758e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8758e.dir/build.make CMakeFiles/cmTC_8758e.dir/build
+        Building C object CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/gcc-14   -arch arm64   -v -Wl,-v -o CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o -c /Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/gcc-14
+        Target: aarch64-apple-darwin23
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran,m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Homebrew GCC 14.2.0) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o' '-c' '-mmacosx-version-min=15.0.0' '-asm_macosx_version_min=15.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_8758e.dir/'
+         /opt/homebrew/Cellar/gcc/14.2.0/bin/../libexec/gcc/aarch64-apple-darwin23/14/cc1 -quiet -v -iprefix /opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/ -D__DYNAMIC__ /Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeCCompilerABI.c -fPIC -quiet -dumpdir CMakeFiles/cmTC_8758e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mmacosx-version-min=15.0.0 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -o /var/folders/2s/3htc56b517s8k6xxfywv9k_w0000gn/T//ccEU9Qta.s
+        GNU C17 (Homebrew GCC 14.2.0) version 14.2.0 (aarch64-apple-darwin23)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include
+         /opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed
+         /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks
+        End of search list.
+        Compiler executable checksum: f04cddc3887ed66d0bccc982b0df008b
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o' '-c' '-mmacosx-version-min=15.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_8758e.dir/'
+         as -arch arm64 -v -mmacosx-version-min=15.0 -o CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o /var/folders/2s/3htc56b517s8k6xxfywv9k_w0000gn/T//ccEU9Qta.s
+        Apple clang version 16.0.0 (clang-1600.0.26.3)
+        Target: arm64-apple-darwin24.0.0
+        Thread model: posix
+        InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple arm64-apple-macosx15.0.0 -target-sdk-version=15.0 -filetype obj -main-file-name ccEU9Qta.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 "-fdebug-compilation-dir=/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1TTWaG" -dwarf-debug-producer "Apple clang version 16.0.0 (clang-1600.0.26.3)" -dwarf-version=5 -mrelocation-model pic -o CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o /var/folders/2s/3htc56b517s8k6xxfywv9k_w0000gn/T//ccEU9Qta.s
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.o' '-c' '-mmacosx-version-min=15.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_8758e.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_8758e
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8758e.dir/link.txt --verbose=1
+        /opt/homebrew/bin/gcc-14  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm/lib
+        Undefined symbols for architecture arm64:
+          "_main", referenced from:
+              <initial-undefines>
+        ld: symbol(s) not found for architecture arm64
+        collect2: error: ld returned 1 exit status
+        make[1]: *** [cmTC_8758e] Error 1
+        make: *** [cmTC_8758e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/gcc-14"
+    directories:
+      source: "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1pp0jZ"
+      binary: "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1pp0jZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/llvm/lib\nexport CPPFLAGS=-I/opt/homebrew/opt/llvm/include"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1pp0jZ'
+        
+        Run Build Command(s): /Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b3034/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b3034.dir/build.make CMakeFiles/cmTC_b3034.dir/build
+        Building C object CMakeFiles/cmTC_b3034.dir/testCCompiler.c.o
+        /opt/homebrew/bin/gcc-14   -arch arm64 -o CMakeFiles/cmTC_b3034.dir/testCCompiler.c.o -c "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/build/CMakeFiles/CMakeScratch/TryCompile-1pp0jZ/testCCompiler.c"
+        Linking C executable cmTC_b3034
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3034.dir/link.txt --verbose=1
+        /opt/homebrew/bin/gcc-14  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm/lib
+        Undefined symbols for architecture arm64:
+          "_main", referenced from:
+              <initial-undefines>
+        ld: symbol(s) not found for architecture arm64
+        collect2: error: ld returned 1 exit status
+        make[1]: *** [cmTC_b3034] Error 1
+        make: *** [cmTC_b3034/fast] Error 2
+        
+      exitCode: 2
+...

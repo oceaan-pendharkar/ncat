@@ -1,0 +1,64 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6" -B "/Users/oceaanpendharkar/Desktop/COMP 3980/ncat-v6/cmake-build-debug"
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+CMake Warning:
+  Value of CMAKE_EXE_LINKER_FLAGS contained a newline; truncating
+
+
+CMake Warning:
+  Value of CMAKE_MODULE_LINKER_FLAGS contained a newline; truncating
+
+
+CMake Warning:
+  Value of CMAKE_SHARED_LINKER_FLAGS contained a newline; truncating
+
+
+CMake Warning:
+  Value of CMAKE_EXE_LINKER_FLAGS contained a newline; truncating
+
+
+CMake Warning:
+  Value of CMAKE_MODULE_LINKER_FLAGS contained a newline; truncating
+
+
+CMake Warning:
+  Value of CMAKE_SHARED_LINKER_FLAGS contained a newline; truncating
+
+
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Compiler being used: /Library/Developer/CommandLineTools/usr/bin/cc
+COMPILER_NAME: cc
+CMake Error at CMakeLists.txt:49 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/analyzer_flags.txt" cannot be read.
+
+
+CMake Error at CMakeLists.txt:52 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/code_generation_flags.txt" cannot be read.
+
+
+CMake Error at CMakeLists.txt:55 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/debug_flags.txt" cannot be read.
+
+
+CMake Error at CMakeLists.txt:58 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/instrumentation_flags.txt" cannot be read.
+
+
+CMake Error at CMakeLists.txt:61 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/optimization_flags.txt" cannot be read.
+
+
+CMake Error at CMakeLists.txt:64 (file):
+  file STRINGS file "/Users/oceaanpendharkar/Desktop/COMP
+  3980/ncat-v6/.flags/cc/warning_flags.txt" cannot be read.
+
+
+-- Configuring incomplete, errors occurred!

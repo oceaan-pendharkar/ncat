@@ -1,0 +1,1 @@
+main src/main.c src/copy.c src/open.c include/copy.h include/open.h
