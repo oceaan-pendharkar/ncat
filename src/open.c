@@ -9,7 +9,7 @@
 #include <sys/un.h>
 #include <unistd.h>
 
-static void setup_address(struct sockaddr_storage *addr, const char *address, in_port_t port, int *err);
+static void setup_address(struct sockaddr_storage *addr, socklen_t *addr_len, const char *address, in_port_t port, int *err);
 
 int open_keyboard(void)
 {
@@ -147,6 +147,7 @@ int open_network_socket_client(const char *address, in_port_t port, int *err)
     int                     fd;
     int                     result;
     struct sockaddr_storage addr;
+    socklen_t               addr_len;
 
     fd = socket(AF_INET, SOCK_STREAM, 0);    // NOLINT(android-cloexec-socket)
 
@@ -157,8 +158,8 @@ int open_network_socket_client(const char *address, in_port_t port, int *err)
     }
 
     memset(&addr, 0, sizeof(addr));
-    setup_address(&addr, address, port, err);
-    result = connect(fd, (const struct sockaddr *)&addr, sizeof(addr));
+    setup_address(&addr, &addr_len, address, port, err);
+    result = connect(fd, (const struct sockaddr *)&addr, addr_len);
 
     if(result == -1)
     {
@@ -177,6 +178,7 @@ int open_network_socket_server(const char *address, in_port_t port, int backlog,
     int                     client_fd;
     int                     result;
     struct sockaddr_storage addr;
+    socklen_t               addr_len;
 
     client_fd = -1;
     server_fd = socket(AF_INET, SOCK_STREAM, 0);    // NOLINT(android-cloexec-socket)
@@ -188,8 +190,8 @@ int open_network_socket_server(const char *address, in_port_t port, int backlog,
     }
 
     memset(&addr, 0, sizeof(addr));
-    setup_address(&addr, address, port, err);
-    result = bind(server_fd, (struct sockaddr *)&addr, sizeof(addr));
+    setup_address(&addr, &addr_len, address, port, err);
+    result = bind(server_fd, (struct sockaddr *)&addr, addr_len);
 
     if(result == -1)
     {
@@ -221,11 +223,12 @@ done:
     return client_fd;
 }
 
-static void setup_address(struct sockaddr_storage *addr, const char *address, in_port_t port, int *err)
+static void setup_address(struct sockaddr_storage *addr, socklen_t *addr_len, const char *address, in_port_t port, int *err)
 {
     in_port_t net_port;
 
-    net_port = htons(port);
+    *addr_len = 0;
+    net_port  = htons(port);
     memset(addr, 0, sizeof(*addr));
 
     if(inet_pton(AF_INET, address, &(((struct sockaddr_in *)addr)->sin_addr)) == 1)
@@ -235,6 +238,7 @@ static void setup_address(struct sockaddr_storage *addr, const char *address, in
         ipv4_addr           = (struct sockaddr_in *)addr;
         addr->ss_family     = AF_INET;
         ipv4_addr->sin_port = net_port;
+        *addr_len           = sizeof(struct sockaddr_in);
     }
     else if(inet_pton(AF_INET6, address, &(((struct sockaddr_in6 *)addr)->sin6_addr)) == 1)
     {
@@ -243,6 +247,7 @@ static void setup_address(struct sockaddr_storage *addr, const char *address, in
         ipv6_addr            = (struct sockaddr_in6 *)addr;
         addr->ss_family      = AF_INET6;
         ipv6_addr->sin6_port = net_port;
+        *addr_len            = sizeof(struct sockaddr_in6);
     }
     else
     {
